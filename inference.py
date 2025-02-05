@@ -11,7 +11,7 @@ import time
 
 # default: Load the model on the available device(s)
 model = Qwen2VLForConditionalGeneration.from_pretrained(
-    "Gr0o0vyHan/Kowen2_vl_lora_8b", torch_dtype=torch.float16, device_map={"":"cuda:0"}
+    "Gr0o0vyHan/Kowen2-vol-1-7B", torch_dtype=torch.float16, device_map={"":"cuda:0"}
 )
 
 # We recommend enabling flash_attention_2 for better acceleration and memory saving, especially in multi-image and video scenarios.
@@ -23,7 +23,7 @@ model = Qwen2VLForConditionalGeneration.from_pretrained(
 # )
 
 # default processer
-processor = AutoProcessor.from_pretrained("Gr0o0vyHan/Kowen2_vl_lora_8b")
+processor = AutoProcessor.from_pretrained("Gr0o0vyHan/Kowen2-vol-1-7B")
 
 # The default range for the number of visual tokens per image in the model is 4-16384. You can set min_pixels and max_pixels according to your needs, such as a token count range of 256-1280, to balance speed and memory usage.
 # min_pixels = 256*28*28
